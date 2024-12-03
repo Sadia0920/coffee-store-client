@@ -38,8 +38,7 @@ export default function Users() {
     });
   }
   return (
-    <div>
-      <h1>users:{loadedUsers.length}</h1>
+    <div className='w-10/12 mx-auto py-10'>
       <div className="overflow-x-auto">
   <table className="table">
     {/* head */}
