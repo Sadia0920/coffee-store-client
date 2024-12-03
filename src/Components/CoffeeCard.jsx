@@ -16,7 +16,7 @@ export default function CoffeeCard({coffee,coffees,setCoffees}) {
       confirmButtonText: "Yes, delete it!"
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/coffee/${_id}`,{
+        fetch(`https://coffee-store-server-omega-gilt.vercel.app/coffee/${_id}`,{
           method : "DELETE"
         })
         .then(res=>res.json())

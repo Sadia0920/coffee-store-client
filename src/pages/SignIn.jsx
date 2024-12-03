@@ -20,7 +20,7 @@ export default function SignIn() {
       const loginInfo = {email,lastSignInTime}
       console.log(loginInfo)
 
-      fetch(`http://localhost:3000/users`,{
+      fetch(`https://coffee-store-server-omega-gilt.vercel.app/users`,{
         method : 'PATCH',
         headers : {
           'content-type' : 'application/json'

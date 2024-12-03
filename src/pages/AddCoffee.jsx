@@ -17,7 +17,7 @@ export default function AddCoffee() {
         const newCoffee = {name,chef,supplier,taste,category,details,photo}
         console.log(newCoffee)
 
-        fetch('http://localhost:3000/coffee', {
+        fetch('https://coffee-store-server-omega-gilt.vercel.app/coffee', {
             method : 'POST',
             headers : {
                 'content-type' : 'application/json'

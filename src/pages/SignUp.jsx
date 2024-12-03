@@ -20,7 +20,7 @@ export default function SignUp() {
       const newUser ={name,email,createdAt}
 
       // MongoDB
-      fetch(`http://localhost:3000/users`,{
+      fetch(`https://coffee-store-server-omega-gilt.vercel.app/users`,{
         method : 'POST',
         headers : {
           'content-type' : 'application/json'
