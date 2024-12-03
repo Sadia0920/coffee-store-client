@@ -15,7 +15,6 @@ export default function AddCoffee() {
         const details = form.details.value;
         const photo = form.photo.value;
         const newCoffee = {name,chef,supplier,taste,category,details,photo}
-        console.log(newCoffee)
 
         fetch('https://coffee-store-server-omega-gilt.vercel.app/coffee', {
             method : 'POST',
@@ -26,7 +25,6 @@ export default function AddCoffee() {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data)
             if(data.insertedId){
                 Swal.fire({
                     title: 'Success',

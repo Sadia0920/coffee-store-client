@@ -15,7 +15,6 @@ export default function SignUp() {
     
     createUser(email,password)
     .then(result =>{
-      console.log(result.user)
       const createdAt = result?.user?.metadata?.creationTime;
       const newUser ={name,email,createdAt}
 
@@ -29,7 +28,6 @@ export default function SignUp() {
       })
       .then(res=>res.json())
       .then(data=>{
-        console.log(data)
         if(data.insertedId){
           Swal.fire({
               title: 'Success',
@@ -42,7 +40,6 @@ export default function SignUp() {
       })
     })
     .catch(error =>{
-      console.log(error)
     })
   }
   return (

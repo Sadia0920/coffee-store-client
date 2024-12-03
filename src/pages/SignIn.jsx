@@ -13,12 +13,10 @@ export default function SignIn() {
 
     signInUser(email,password)
     .then(result => {
-      console.log(result.user)
 
       //Update Last Sign In Time
       const lastSignInTime = result?.user?.metadata?.lastSignInTime;
       const loginInfo = {email,lastSignInTime}
-      console.log(loginInfo)
 
       fetch(`https://coffee-store-server-omega-gilt.vercel.app/users`,{
         method : 'PATCH',
@@ -29,7 +27,7 @@ export default function SignIn() {
       })
       .then(res=>res.json())
       .then(data => {
-        console.log(data)
+       
         if(data.modifiedCount>0){
           Swal.fire({
               title: 'Success',
@@ -42,7 +40,7 @@ export default function SignIn() {
       })
     })
     .catch(error => {
-      console.log(error.message)
+     
     })
   }
   return (
@@ -70,7 +68,7 @@ export default function SignIn() {
           </label>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Sign In</button>
+          <button className="btn btn-primary">SignIn</button>
         </div>
       </form>
     </div>

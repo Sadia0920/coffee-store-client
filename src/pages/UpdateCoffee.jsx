@@ -16,7 +16,6 @@ export default function UpdateCoffee() {
         const details = form.details.value;
         const photo = form.photo.value;
         const updateCoffee = {name,chef,supplier,taste,category,details,photo}
-        console.log(updateCoffee)
 
         fetch(`https://coffee-store-server-omega-gilt.vercel.app/coffee/${_id}`, {
             method : 'PUT',
@@ -27,7 +26,6 @@ export default function UpdateCoffee() {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data)
             if(data.modifiedCount>0){
                 Swal.fire({
                     title: 'Success',
